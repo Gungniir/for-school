@@ -1,29 +1,49 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import store from '../store'
+import WorksList from "../views/WorksList";
+import WorkBrowser from "../views/WorkBrowser";
 
 Vue.use(VueRouter)
+const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
+    {
+        path: '/works',
+        name: 'WorksList',
+        component: WorksList
+    },
+    {
+        path: '/work/:workId',
+        name: 'WorkBrowser',
+        component: WorkBrowser,
+        props: (route) => ({workId: Number(route.params.workId)}),
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+        children: [{
+            name: 'WorkBrowserItem',
+            path: 'item/:itemId',
+            props: (route) => ({itemId: Number(route.params.itemId)})
+        }]
+    }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
+router.afterEach(to => {
+    if (to.name === 'Home') {
+        store.state.navTitle = 'Главная'
+    } else if (to.name === 'WorksList') {
+        store.state.navTitle = 'Просмотр работ'
+    } else if (to.name === 'WorkBrowser' || to.name === 'WorkBrowserItem') {
+        store.state.navTitle = `Просмотр работы √${to.params.workId}`
+    }
+});
 
 export default router
