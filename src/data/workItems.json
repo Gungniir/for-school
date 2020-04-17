@@ -46,5 +46,53 @@
       }
     ],
     "run": "sumMinValueInEachRow"
+  },
+  {
+    "id": 4,
+    "workId": 2,
+    "title": "Задача 1",
+    "desc": "Тут должно быть описание...",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "console",
+        "label": "Вход: ",
+        "name": "console"
+      }
+    ],
+    "run": "task1_23042020"
+  },
+  {
+    "id": 5,
+    "workId": 2,
+    "title": "Задача 2",
+    "desc": "Тут должно быть описание...",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "console",
+        "label": "Вход: ",
+        "name": "console"
+      }
+    ],
+    "run": "task2_23042020"
+  },
+  {
+    "id": 6,
+    "workId": 2,
+    "title": "Костяшки",
+    "desc": "Динамика? O.o",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "console",
+        "label": "Вход: ",
+        "name": "console"
+      }
+    ],
+    "run": "task3_23042020"
   }
 ]

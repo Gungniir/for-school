@@ -22,13 +22,14 @@
     import methodsRaw from "../data/methods.json"
     import beautifier from 'js-beautify'
     import WorkBrowserPreview from "../components/WorkBrowserPreview";
+    import cloneDeep from 'lodash.clonedeep'
 
     export default {
         name: "WorkBrowser",
         components: {WorkBrowserPreview, WorkBrowserInteractive, WorkBrowserNavItem},
         data() {
             return {
-                selectedItemId: (this.itemId !== 0) ? this.itemId : items[0].id,
+                selectedItemId: 0,
                 out: ''
             }
         },
@@ -36,11 +37,10 @@
             workId: {
                 type: Number,
                 required: true
-            },
-            itemId: {
-                type: Number,
-                default: 0
             }
+        },
+        beforeMount: function () {
+            this.selectedItemId = (Number(this.$route.params.itemId)) ? Number(this.$route.params.itemId) : this.items[0].id
         },
         computed: {
             items: (vm) => {
@@ -65,7 +65,7 @@
             start: function (params) {
                 let response;
                 try {
-                    response = methods[this.selectedItem.run](params);
+                    response = methods[this.selectedItem.run](cloneDeep(params));
                 } catch (e) {
                     response = e.toString();
                 }

@@ -17,10 +17,11 @@
 <script>
     import BaseTextInput from "./BaseTextInput";
     import BasePrimeButton from "./BasePrimeButton";
+    import BaseTextareaInput from "./BaseTextareaInput";
 
     export default {
         name: "WorkBrowserInteractive",
-        components: {BasePrimeButton, BaseTextInput},
+        components: {BasePrimeButton, BaseTextInput, BaseTextareaInput},
         data() {
             return {
                 params: {}
@@ -37,6 +38,8 @@
                 switch (item) {
                     case 'text':
                         return 'BaseTextInput'
+                    case 'console':
+                        return 'BaseTextareaInput'
                     default:
                         return item
                 }
