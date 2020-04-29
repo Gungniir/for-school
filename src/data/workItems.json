@@ -94,5 +94,21 @@
       }
     ],
     "run": "task3_23042020"
+  },
+  {
+    "id": 7,
+    "workId": 3,
+    "title": "Пушкин",
+    "desc": "*--* **- *** **** -*- ** -*",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "text",
+        "label": "Вход: ",
+        "name": "str"
+      }
+    ],
+    "run": "pushkin"
   }
 ]
