@@ -62,10 +62,10 @@
                 this.selectedItemId = id;
                 this.$router.push(`/work/${this.workId}/item/${this.selectedItemId}`)
             },
-            start: function (params) {
+            start: async function (params) {
                 let response;
                 try {
-                    response = methods[this.selectedItem.run](cloneDeep(params));
+                    response = await methods[this.selectedItem.run](cloneDeep(params));
                 } catch (e) {
                     response = e.toString();
                 }

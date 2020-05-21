@@ -110,5 +110,85 @@
       }
     ],
     "run": "pushkin"
+  },
+  {
+    "id": 8,
+    "workId": 4,
+    "title": "Палиндром",
+    "desc": "",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "text",
+        "label": "Вход: ",
+        "name": "n"
+      }
+    ],
+    "run": "pal0505"
+  },
+  {
+    "id": 9,
+    "workId": 4,
+    "title": "Медиана",
+    "desc": "Я бы обязательно подумал, как бы это решить без сортировки, но я слишком долго провозился со второй задачей...",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "console",
+        "label": "Вход: ",
+        "name": "console"
+      }
+    ],
+    "run": "median"
+  },
+  {
+    "id": 10,
+    "workId": 4,
+    "title": "3 задача",
+    "desc": "Не успею...",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "console",
+        "label": "Вход: ",
+        "name": "console"
+      }
+    ],
+    "run": "task3_05052020"
+  },
+  {
+    "id": 11,
+    "workId": 5,
+    "title": "Дешифратор",
+    "desc": "",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "text",
+        "label": "Вход: ",
+        "name": "n"
+      }
+    ],
+    "run": "task1_15052020"
+  },
+  {
+    "id": 12,
+    "workId": 6,
+    "title": "Задание 1",
+    "desc": "",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "file",
+        "label": "Вход: ",
+        "name": "f"
+      }
+    ],
+    "run": "task1_21052020"
   }
 ]

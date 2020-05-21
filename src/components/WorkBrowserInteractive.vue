@@ -18,10 +18,11 @@
     import BaseTextInput from "./BaseTextInput";
     import BasePrimeButton from "./BasePrimeButton";
     import BaseTextareaInput from "./BaseTextareaInput";
+    import BaseFileInput from "./BaseFileInput";
 
     export default {
         name: "WorkBrowserInteractive",
-        components: {BasePrimeButton, BaseTextInput, BaseTextareaInput},
+        components: {BasePrimeButton, BaseTextInput, BaseTextareaInput, BaseFileInput},
         data() {
             return {
                 params: {}
@@ -40,6 +41,8 @@
                         return 'BaseTextInput'
                     case 'console':
                         return 'BaseTextareaInput'
+                    case 'file':
+                        return 'BaseFileInput'
                     default:
                         return item
                 }
