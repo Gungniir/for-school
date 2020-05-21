@@ -347,7 +347,7 @@ export default {
      * @param {{f: FileList}} params
      */
     async task1_21052020(params) {
-        if (!params.f[0]) {
+        if (!params.f) {
             return 'Error: you must select a file'
         }
 
