@@ -442,5 +442,28 @@ export default {
         }
 
         return out;
-    }
+    },
+
+    /**
+     * 3 задача
+     * @param {{console: {getLine: function}}} params
+     */
+    task1_28052020(params) {
+        const console = params.console;
+
+        const n = +console.getLine();
+
+        let max = 0;
+        let map = [1, 1];
+
+        for (let i = 0; i < n; i++) {
+            let a = +console.getLine();
+
+            map = [Math.max(map[0] * a, map[1] * a, 1), Math.min(map[0] * a, map[1] * a, 1)];
+
+            max = Math.max(map[0], max)
+        }
+
+        return max;
+    },
 }

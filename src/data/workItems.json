@@ -190,5 +190,21 @@
       }
     ],
     "run": "task1_21052020"
+  },
+  {
+    "id": 13,
+    "workId": 7,
+    "title": "Задание 1",
+    "desc": "",
+    "type": "function",
+    "inputs": [
+      {
+        "id": 0,
+        "type": "console",
+        "label": "Вход: ",
+        "name": "console"
+      }
+    ],
+    "run": "task1_28052020"
   }
 ]
